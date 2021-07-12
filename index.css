@@ -1,0 +1,462 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Robot',sans-serif;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+:root {
+    --main-bg-color: #FFFFFF;
+    --secondary-color: #F5F6FC;
+    --text-color: #343951;
+    --aside-second-color:#464C61;
+    --aside-third-color: #BEC0C8;
+    --button-color:#FF9F00;
+    --button-secondary-color: #FFB233;
+    --input-text-color: #BCBECA;
+    --menu-font-color: #858A9D;
+    --border-color:#E0E7F1;
+    --icons-bg-color: #C4C4C4;
+    --first-color-donut:#4AC29D;
+    --second-color-donut:#FF9F00;
+    --third-color-donut:#BCBECA;
+    --fourth-color-donut:#689FF8;
+    --gap: 19px;
+    --aside-font-size: 10px;
+    --title-font-size: 20px;
+    --subtitle-font-size: 12px;
+    --medium-font-size: 14px;
+    --descrition-font-size: 8px;
+    --box-width : 116px;
+    --box-height : 111px;
+    --btn-height: 3em;
+    --big-box-with: 194px;
+    --big-box-height:202px;
+    --width-gigas:54px;
+    --height-gigas:21px;
+    --mosaics--width: 159px;
+    --mosaics-height: 133px;
+    --miniMosaic-height: 90px;
+    --width-small-gradient: 74px;
+    --height-small-gradient:21px;
+    --file-color-size: 28px;
+    --user-item-size: 15px;
+    --user-icon-size: 31px;
+    --squares-size: 28px;
+    --circle-size: 18px;
+}
+
+body {
+   margin:0;
+}
+
+.container {
+    background-color:var(--main-bg-color);
+    height: 768px;
+    display: grid;
+    grid-template-columns: 16% 60% 24%;
+}
+/*---------ASIDE---------------*/
+aside{
+    display: grid;
+    grid-template-rows: 10% 42% 25% 18% 5%;
+    grid-column: 1/2;
+    background-color: var(--text-color);
+    margin-right: var(--gap);
+    font-size: var(--aside-font-size);
+}
+.gradient{
+    grid-row: 1/2;
+    width:var(--width-small-gradient);
+    height:var(--height-small-gradient);
+    border-radius: 5px;
+    justify-self:  center;
+    align-self: center;
+    background: linear-gradient(270deg, #689EF8 0%,#FF6860 56.25%, #FF9F00 100%);
+}
+.gradient.big{
+    height: 73px;
+    width: 119px;
+}
+.upperAside {
+    display: grid;
+    grid-row: 2/3;
+    color: var(--menu-font-color);
+    border-bottom: 1px solid var(--menu-font-color);
+}
+label input {
+    margin-left: 32px;
+    margin-right: 19px;
+}
+
+.bottomAside{
+    grid-row: 4/5;
+    width: var(--box-width);
+    height: var(--box-height);
+    background-color: var(--aside-second-color);
+    margin: 5px 25px;
+    padding: 15px 10px;
+    justify-self: center;
+    border-radius: 5%;
+    color: var(--aside-third-color);
+}
+.createBtn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: var(--box-width);
+    height: var(--btn-height);
+    margin-left: 28px;
+    background-color: var(--button-color);
+    color: var(--main-bg-color);
+    grid-row: 5/6 ;
+    border-radius: 7px;
+}
+/*-----------MAIN--------*/
+.main{
+    display: grid;
+    grid-column: 2/3;
+    background-color: var(--secondary-color);
+    margin-right: var(--gap);
+    padding: 25px 16px;
+}
+.searchInput {
+    padding : 10px;
+    border:0;
+    border-radius: 5%;
+    color: var(--input-text-color);
+}
+.mainMenu {
+    display: grid;
+    grid-template-columns: 92% 4% 4%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.title {
+    font-size: var(--title-font-size);
+    color: var(--text-color);
+}
+.mosaics {
+    display: flex;
+    justify-content: space-around;
+}
+.optionsMosaic {
+    display: grid;
+    grid-template-columns: 5% 35% 10% 40% 10%;
+    grid-template-rows: 7% 20% 10%;
+}
+.squares {
+    grid-row: 1/3;
+    width: var(--squares-size);
+    height: var(--squares-size);
+    background-color: var(--button-color);
+}
+.dots {
+    grid-column: 5/6;
+    color: var(--icons-bg-color);
+}
+.squares.light {
+    background: #FFD999;
+    grid-row: 2/3;
+}
+.rings {
+    width: var(--circle-size);
+    height: var(--circle-size);
+    background: var(--main-bg-color);
+    border-radius: 50%;
+    border: 1px solid var(--menu-font-color) ;    
+    grid-row: 3/4;
+    grid-column: 3/4;
+}
+.rings.second {
+    grid-column: 4/5;
+}
+.mosaic {
+    display: grid;
+    grid-template-rows: 50% 25% 25% ;
+    flex: 0 0 var(--mosaics--width);
+    height: var(--mosaics-height);
+    background-color: var(--main-bg-color);
+    border-radius: 12%;
+    padding: 14px;
+}
+.miniMosaic {
+    flex: 0 0 var(--mosaics--width);
+    height: var(--miniMosaic-height);
+    background-color: var(--main-bg-color);
+    border-radius: 12%;
+    padding: 14px;
+}
+.optionsMiniMosaic {
+    display: grid;
+    grid-template-columns: 65% 7% 10%;
+    align-items: center;
+}
+.ringColor {
+    width: var(--circle-size);
+    height: var(--circle-size);
+    border-radius: 50%;
+    background: var(--main-bg-color)
+}
+.ringColor.green {
+    border: 1px solid #4AC29D;
+}
+.ringColor.red {
+    border: 1px solid #FF6860
+}
+.titleProject {
+    font-size: var(--subtitle-font-size);
+    margin:0px;
+}
+.dateProject {
+    font-size: var(--descrition-font-size);
+    color: var(--menu-font-color);
+}
+.dateProject.middle {
+    text-align: center;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 0 16px;
+}
+.fileName {
+    color: var(--text-color);
+}
+th{
+    font-size: var(--subtitle-font-size);
+    color: var(--menu-font-color);
+    text-align: left;
+    font-weight: normal;
+    background-color: var(--secondary-color);
+}
+tr{
+    background-color: var(--main-bg-color);
+    height: 42px;
+    font-size: var(--subtitle-font-size);
+    border-radius: 12px;
+    color: var(--menu-font-color);
+}
+
+
+/*---STORAGE SIDE*/
+.storageSide {
+    display: grid;
+    grid-template-rows: 10% 32% 30% 28%;
+    grid-column: 3/4;
+    background-color:var(--secondary-color);
+    padding: 20px 33px;
+}
+.userInfo {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 10% 10% 35% 25% 20%;
+    grid-row: 1/2;
+    border-bottom: 1px solid var(--border-color);
+}
+.userItem {
+    width: var(--user-item-size);
+    height: var(--user-item-size);
+    background-color: var(--icons-bg-color);
+}
+.userItem.border {
+    border: 1px solid #9D9FAF;
+    background-color: #F5F6FC;
+}
+.userItem.borderblack {
+    border: 1px solid black;
+    background-color: #F5F6FC;
+}
+.name {
+    grid-column: 4/5;
+}
+.userIcon {
+    width: var(--user-icon-size);
+    height: var(--user-icon-size);
+    background-color: var(--icons-bg-color);
+    border-radius: 50%;
+}
+.storageGraphic {
+    grid-row: 2/3;
+
+}
+.filesResume {
+    grid-row: 3/4;
+}
+.fileItem{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 15% 35% 40%;
+    border-bottom: 1px solid var(--border-color);
+}
+.fileColor {
+    width: var(--file-color-size);
+    height: var(--file-color-size);
+    border-radius: 8px;
+    background-color: #FF9F00;
+    margin-left: 5px;
+}
+.subtitle {
+    font-size: var(--aside-font-size);
+    float: none;
+}
+.gigasBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    font-size: var(--descrition-font-size);
+    font-weight: 500;
+    width: var(--width-gigas);
+    height: var(--height-gigas);
+    background-color: var(--main-bg-color);
+    border-radius: 4px;
+    text-align: center;
+    justify-content: center;
+}
+.colorDistortion{
+    display: grid;
+    grid-template-rows: 50% 10% 10% 30%;
+    justify-items: center;
+    grid-row: 4/5;
+    width: var(--big-box-with);
+    height: var(--big-box-height);
+    background-color: var(--main-bg-color);
+    place-self: center;
+    border-radius: 18px;
+}
+/*general elements*/
+button{
+    align-self: center;
+    width: 21px;
+    height: 21px;
+    background-color: var(--button-secondary-color);
+    border: none;
+    border-radius: 5%;
+    color: var(--main-bg-color);
+    size: var(--aside-font-size);
+    font-weight: bold;
+}
+.bigButton {
+    width: var(--box-width);
+    height: var(--btn-height);
+    border-radius: 7%;
+    font-size: var(--aside-font-size);
+}
+span {
+    float: right;
+    font-size: var(--subtitle-font-size);
+    color: inherit;
+    
+}
+span.center {
+    float:none;
+}
+/*DONUT*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;  
+}
+  
+.donut-chart {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 2rem;
+  border-radius: 100%
+ }
+div.center {
+  background: var(--main-bg-color);
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 24px;
+  font-weight: normal;
+  top:0;left:0;bottom:0;right:0;
+  width: 115px;
+  height: 115px;
+  margin: auto;
+  border-radius: 50%;
+  line-height: 60px;
+  padding: 15% 0 0;
+}
+.subtitle.donut {
+    font-size: 14px;
+    color: #858A9D;
+    line-height: 10px;
+}
+    
+    
+.portion-block {
+    border-radius: 50%;
+    clip: rect(0px, 160px, 160px, 80px);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+.circle {
+    border-radius: 50%;
+    clip: rect(0px, 80px, 160px, 0px);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+    
+    
+#part1 {
+    transform: rotate(0deg);
+  }
+
+    #part1 .circle {
+        background-color: var(--first-color-donut);
+        /*transform: rotate(76deg);*/
+        animation: first 1s 1 forwards;
+      }
+    
+    
+#part2 {
+    transform: rotate(40deg);
+  }
+    #part2 .circle {
+        background-color: var(--second-color-donut);
+        animation: second 1s 1 forwards 1s;
+    }
+#part3 {
+    transform: rotate(190deg);
+}
+    #part3 .circle {
+        background-color: var(--third-color-donut);
+        animation: third 1s 1 forwards 2s;
+    }
+#part4 {
+    transform: rotate(270deg);
+}
+    #part4 .circle {
+        background-color: var(--fourth-color-donut);
+        animation: fourth 1s 1 forwards 3s;
+    }
+    
+    
+/* Animation */
+@keyframes first {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(40deg);}
+}
+    
+@keyframes second {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(150deg);}
+}
+    
+@keyframes third {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(80deg);}
+}
+@keyframes fourth {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(90deg);}
+}

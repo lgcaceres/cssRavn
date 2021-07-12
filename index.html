@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+</head>
+<body>
+    <div class= "container">
+        <aside>
+            <div class="gradient">
+            </div>
+            <div class="upperAside">
+                <label for="home"><input type="checkbox" id="home" name="home" checked>Home</label><br>
+                <label for="myFiles"><input type="checkbox" id="myFiles" name="myFiles">My Files</label> <br>
+                <label for="recentFiles"><input type="checkbox" id="recentFiles" name="recentFiles">Recent Files</label><br> 
+                <label for="sharedFiles"><input type="checkbox" id="sharedFiles" name="sharedFiles">Shared Files</label><br>  
+                <label for="fileRequest"><input type="checkbox" id="fileRequest" name="fileRequest">File Request</label><br> 
+                <label for="trash"><input type="checkbox" id="trash" name="trash" >Trash</label>
+            </div>
+            <div class="bottomAside">
+                <input type="checkbox" id="uploadFiles" name="uploadFiles">
+                <label for="uploadFiles">Upload Files</label> <br>
+                <input type="checkbox" id="uploadFolder" name="uploadFolder">
+                <label for="uploadFolder">Upload Folder</label><br>  
+                <input type="checkbox" id="newFolder" name="newFolder">
+                <label for="newFolder">New Folder</label><br> 
+                <input type="checkbox" id="more" name="more" >
+                <label for="more">More</label>
+            </div>
+            <div class="createBtn">
+                <p>Create New</p>
+                <button>+</button>
+            </div>
+        </aside>
+
+
+        <div class = "main">
+            <input class="searchInput" type="search" id="search" name="search" placeholder="Search">
+            <!-- RECENTLY USED -->
+            <div class="mainMenu">
+                <div class=title>Recently Used</div>
+                <div class="userItem borderblack"></div>
+                <div class="userItem border"></div>    
+            </div>
+
+            <div class="mosaics">
+                <div class="mosaic">
+                    <div class="optionsMosaic">
+                        <div class="squares light"></div>
+                        <div class="squares"></div>
+                        <div class="rings"></div>
+                        <div class="rings second"></div>
+                        <div class="dots">&#10247;</div>
+                    </div>
+                    <p class="titleProject">App Project</p>
+                    <p class="dateProject">Created 20.02.2020</h2>
+                </div>
+                <div class="mosaic">
+                    <div class="optionsMosaic">
+                        <div class="squares light"></div>
+                        <div class="squares"></div>
+                        <div class="rings"></div>
+                        <div class="rings second"></div>
+                        <div class="dots">&#10247;</div>
+                    </div>
+                    <p class="titleProject">Project: Filbit</p>
+                    <p class="dateProject">Created 28.02.2020</h2>
+                </div>
+                <div class="mosaic">
+                    <div class="optionsMosaic">
+                        <div class="squares light"></div>
+                        <div class="squares"></div>
+                        <div class="rings"></div>
+                        <div class="rings second"></div>
+                        <div class="dots">&#10247;</div>
+                    </div>
+                    <p class="titleProject">App Project</p>
+                    <p class="dateProject">Created 4.03.2020</h2>
+                </div>
+            </div>
+            <!-- RECENT FILES-->
+            <p class=title>Recent Files <span> View All</span></p>
+            <table>
+                <tr>
+                    <th scope="col">Name </th>
+                    <th scope="col"></th>
+                    <th scope="col">Members</th>
+                    <th scope="col">Last Modified</th>
+                    <th scope="col"> </th>
+                </tr>
+                <tr>
+                    <td> <div class="fileColor"></div></td>
+                    <td class="fileName">Travel Landing Page</td>
+                    <td>5 members</td>
+                    <td>Mar 8, 2020</td>
+                    <td>...</td>
+                </tr>
+                <tr>
+                    <td> <div class="fileColor"></div></td>
+                    <td class="fileName">True Photos</td>
+                    <td>12 members</td>
+                    <td>Mar 8, 2020</td>
+                    <td>...</td>
+                </tr>
+                <tr>
+                    <td> <div class="fileColor"></div></td>
+                    <td class="fileName">Dashboard Structure</td>
+                    <td>10 members</td>
+                    <td>Mar 9, 2020</td>
+                    <td>...</td>
+                </tr>
+                <tr>
+                    <td> <div class="fileColor"></div></td>
+                    <td class="fileName">Character Ilustration</td>
+                    <td>3 members</td>
+                    <td>Mar 10, 2020</td>
+                    <td>...</td>
+                </tr>
+            </table>
+            <!-- SHARE WITH ME-->
+            <p class=title>Share with me <span> View All</span></p>
+            <div class="mosaics">
+                <div class="miniMosaic">
+                    <div class="optionsMiniMosaic">
+                        <div class="squares"></div>
+                        <div class="ringColor green"></div>
+                        <div class="ringColor red"></div>
+                    </div>
+                    <p class="titleProject">Landing Page</p>
+                    <p class="dateProject">Created 20.02.2020</h2>
+                </div>
+                <div class="miniMosaic">
+                    <div class="optionsMiniMosaic">
+                        <div class="squares"></div>
+                        <div class="ringColor green"></div>
+                        <div class="ringColor red"></div>
+                    </div>
+                    <p class="titleProject">Illustration Pack</p>
+                    <p class="dateProject">Created 28.02.2020</h2>
+                </div>
+                <div class="miniMosaic">
+                    <div class="optionsMiniMosaic">
+                        <div class="squares"></div>
+                        <div class="ringColor green"></div>
+                        <div class="ringColor red"></div>
+                    </div>
+                    <p class="titleProject">CV design</p>
+                    <p class="dateProject">Created 4.03.2020</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- ANOTHER SIDE JJJ-->
+        <div class="storageSide">
+            <div class="userInfo">
+                <div class="userItem"></div>
+                <div class="userItem"></div>
+                <div class="name">Name</div>
+                <div class="userIcon"></div>
+            </div>
+            <div class="storageGraphic">
+                <p class=title>Storage</p>
+                <div class="donut-chart-block block"> 
+                    <div class="donut-chart">
+                        <div id="part1" class="portion-block"><div class="circle"></div></div>
+                        <div id="part2" class="portion-block"><div class="circle"></div></div>
+                        <div id="part3" class="portion-block"><div class="circle"></div></div>
+                        <div id="part4" class="portion-block"><div class="circle"></div></div>
+                        <div class="center">85 %<div class="subtitle donut">Used</div></div>        
+                    </div>
+                </div>
+                <p class="dateProject middle">420.2 GB of 500 GB used</p>
+            </div>
+            <div class="filesResume">
+                <div class="fileItem">
+                    <div class="fileColor"></div>
+                    <div>
+                        <p class="subtitle">Documents</p>
+                        <p class="dateProject">720 files</p>
+                    </div>
+                    <div class="gigasBox">
+                        <p>200 GB</p>
+                    </div>
+                </div>
+                <div class="fileItem">
+                    <div class="fileColor"></div>
+                    <div>
+                        <p class="subtitle">Documents</p>
+                        <p class="dateProject">720 files</p>
+                    </div>
+                    <div class="gigasBox">
+                        <p>125 GB</p>
+                    </div>
+                </div>
+                <div class="fileItem">
+                    <div class="fileColor"></div>
+                    <div>
+                        <p class="subtitle">Documents</p>
+                        <p class="dateProject">720 files</p>
+                    </div>
+                    <div class="gigasBox">
+                        <p>75 GB</p>
+                    </div>
+                </div>
+                <div class="fileItem">
+                    <div class="fileColor"></div>
+                    <div>
+                        <p class="subtitle">Documents</p>
+                        <p class="dateProject">720 files</p>
+                    </div>
+                    <div class="gigasBox">
+                        <p>50 GB</p>
+                    </div>
+                </div>
+            </div>
+            <div class="colorDistortion">
+                <div class="gradient big">
+                </div>
+                <p class="titleProject">Buy more space now!</p><!--can have same class as titileProject and dateProject-->
+                <p class="dateProject">Upgrade to cloud premium</p>
+                <button class="bigButton">Upgrade Account!</button>
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
