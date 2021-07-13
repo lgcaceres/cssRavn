@@ -19,31 +19,31 @@ html {
     --input-text-color: #BCBECA;
     --menu-font-color: #858A9D;
     --border-color:#E0E7F1;
-    --icons-bg-color: #C4C4C4;
+    --icons-bg-color: #C8CCDB;
     --first-color-donut:#4AC29D;
     --second-color-donut:#FF9F00;
     --third-color-donut:#BCBECA;
     --fourth-color-donut:#689FF8;
     --gap: 19px;
     --aside-font-size: 10px;
-    --title-font-size: 20px;
-    --subtitle-font-size: 12px;
-    --medium-font-size: 14px;
+    --title-font-size: 24px;
+    --subtitle-font-size: 16px;
+    --medium-font-size: 16px;
     --descrition-font-size: 8px;
-    --box-width : 116px;
-    --box-height : 111px;
+    --box-width : 144px;
+    --box-height : 120px;
     --btn-height: 3em;
     --big-box-with: 194px;
     --big-box-height:202px;
     --width-gigas:54px;
     --height-gigas:21px;
-    --mosaics--width: 159px;
-    --mosaics-height: 133px;
-    --miniMosaic-height: 90px;
-    --width-small-gradient: 74px;
-    --height-small-gradient:21px;
+    --mosaics--width: 256px;
+    --mosaics-height: 160px;
+    --miniMosaic-height: 136px;
+    --width-small-gradient: 144px;
+    --height-small-gradient:40px;
     --file-color-size: 28px;
-    --user-item-size: 15px;
+    --user-item-size: 24px;
     --user-icon-size: 31px;
     --squares-size: 28px;
     --circle-size: 18px;
@@ -55,9 +55,10 @@ body {
 
 .container {
     background-color:var(--main-bg-color);
-    height: 768px;
+    height: 1024px;
+    min-width: 100vw;
     display: grid;
-    grid-template-columns: 16% 60% 24%;
+    grid-template-columns: 224px 1fr 320px;
 }
 /*---------ASIDE---------------*/
 aside{
@@ -65,14 +66,13 @@ aside{
     grid-template-rows: 10% 42% 25% 18% 5%;
     grid-column: 1/2;
     background-color: var(--text-color);
-    margin-right: var(--gap);
     font-size: var(--aside-font-size);
 }
 .gradient{
     grid-row: 1/2;
     width:var(--width-small-gradient);
     height:var(--height-small-gradient);
-    border-radius: 5px;
+    border-radius: 8px;
     justify-self:  center;
     align-self: center;
     background: linear-gradient(270deg, #689EF8 0%,#FF6860 56.25%, #FF9F00 100%);
@@ -83,9 +83,23 @@ aside{
 }
 .upperAside {
     display: grid;
+    grid-template-rows: repeat(6, 40px);
     grid-row: 2/3;
     color: var(--menu-font-color);
-    border-bottom: 1px solid var(--menu-font-color);
+}
+.placeholder {
+    display: grid;
+    margin-top: 25px;
+    margin-left: 40px;
+    align-items: center;
+    grid-template-columns: 20% 80%;
+  
+}
+.placeholderMini {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin: 5px;
+    
 }
 label input {
     margin-left: 32px;
@@ -93,11 +107,14 @@ label input {
 }
 
 .bottomAside{
+    display: grid;
+    align-items: center;
+    grid-template-rows: repeat(4, 23px);
     grid-row: 4/5;
     width: var(--box-width);
     height: var(--box-height);
     background-color: var(--aside-second-color);
-    margin: 5px 25px;
+    margin: 5px 40px;
     padding: 15px 10px;
     justify-self: center;
     border-radius: 5%;
@@ -109,7 +126,7 @@ label input {
     align-items: center;
     width: var(--box-width);
     height: var(--btn-height);
-    margin-left: 28px;
+    margin-left: 40px;
     background-color: var(--button-color);
     color: var(--main-bg-color);
     grid-row: 5/6 ;
@@ -120,14 +137,15 @@ label input {
     display: grid;
     grid-column: 2/3;
     background-color: var(--secondary-color);
-    margin-right: var(--gap);
     padding: 25px 16px;
 }
 .searchInput {
+    height: 48px;
     padding : 10px;
     border:0;
-    border-radius: 5%;
+    border-radius: 8px;
     color: var(--input-text-color);
+    border: 1px solid var(--icons-bg-color)
 }
 .mainMenu {
     display: grid;
@@ -137,22 +155,33 @@ label input {
 }
 .title {
     font-size: var(--title-font-size);
-    color: var(--text-color);
+    color: #343951;
 }
 .mosaics {
-    display: flex;
+    display: grid;
+    align-items: center;
     justify-content: space-around;
+    grid-template-columns: repeat(3,30%);
 }
 .optionsMosaic {
+    margin-top: 10px;
     display: grid;
+    align-items: center;
     grid-template-columns: 5% 35% 10% 40% 10%;
-    grid-template-rows: 7% 20% 10%;
+    grid-template-rows: 20% 20% 10%;
 }
 .squares {
     grid-row: 1/3;
     width: var(--squares-size);
     height: var(--squares-size);
     background-color: var(--button-color);
+    border-radius: 4px;
+}
+.miniSquares {
+    width: 24px;
+    height: 24px;
+    background-color: var(--button-color);
+    border-radius: 4px;
 }
 .dots {
     grid-column: 5/6;
@@ -161,13 +190,14 @@ label input {
 .squares.light {
     background: #FFD999;
     grid-row: 2/3;
+    border-radius: 4px;
 }
 .rings {
     width: var(--circle-size);
     height: var(--circle-size);
-    background: var(--main-bg-color);
+    background: var(--icons-bg-color);
     border-radius: 50%;
-    border: 1px solid var(--menu-font-color) ;    
+    border: 1px solid var(--main-bg-color) ;    
     grid-row: 3/4;
     grid-column: 3/4;
 }
@@ -177,23 +207,29 @@ label input {
 .mosaic {
     display: grid;
     grid-template-rows: 50% 25% 25% ;
-    flex: 0 0 var(--mosaics--width);
     height: var(--mosaics-height);
     background-color: var(--main-bg-color);
     border-radius: 12%;
     padding: 14px;
 }
 .miniMosaic {
-    flex: 0 0 var(--mosaics--width);
+    padding: 10%;
     height: var(--miniMosaic-height);
     background-color: var(--main-bg-color);
     border-radius: 12%;
-    padding: 14px;
 }
 .optionsMiniMosaic {
     display: grid;
-    grid-template-columns: 65% 7% 10%;
+    grid-template-columns: 70% 7% 7% 7%;
     align-items: center;
+    margin-bottom: 10px;
+}
+.ringNew {
+    width: var(--circle-size);
+    height: var(--circle-size);
+    background: var(--icons-bg-color);
+    border-radius: 50%;
+    border: 1px solid var(--main-bg-color)
 }
 .ringColor {
     width: var(--circle-size);
@@ -209,7 +245,15 @@ label input {
 }
 .titleProject {
     font-size: var(--subtitle-font-size);
+    font-weight: normal;
     margin:0px;
+    line-height: 24px;
+}
+.miniTitleProject {
+    font-size: 10px;
+    font-weight: normal;
+    align-self: center;
+
 }
 .dateProject {
     font-size: var(--descrition-font-size);
@@ -248,11 +292,12 @@ tr{
     grid-column: 3/4;
     background-color:var(--secondary-color);
     padding: 20px 33px;
+    border-left: 1px solid var(--icons-bg-color);
 }
 .userInfo {
     display: grid;
     align-items: center;
-    grid-template-columns: 10% 10% 35% 25% 20%;
+    grid-template-columns: 15% 15% 10% 40% 20%;
     grid-row: 1/2;
     border-bottom: 1px solid var(--border-color);
 }
@@ -260,6 +305,14 @@ tr{
     width: var(--user-item-size);
     height: var(--user-item-size);
     background-color: var(--icons-bg-color);
+    border-radius: 4px;
+}
+.userItemMini {
+    justify-self: center;
+    width: 16px;
+    height: 16px;
+    background-color: var(--icons-bg-color);
+    border-radius: 4px;
 }
 .userItem.border {
     border: 1px solid #9D9FAF;
@@ -271,6 +324,8 @@ tr{
 }
 .name {
     grid-column: 4/5;
+    color:var(--menu-font-color);
+    font-size: var(--subtitle-font-size);
 }
 .userIcon {
     width: var(--user-icon-size);
