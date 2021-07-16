@@ -22,6 +22,7 @@ html {
     --box-width : 144px;
     --box-height : 120px;
     --size--miniItem:16px;
+    --pad:40px;
 
     --main-bg-color: #FFFFFF;
     --secondary-color: #F5F6FC;
@@ -77,7 +78,7 @@ aside{
     display: grid;
     grid-template-rows: 80px 288px 376px 160px 40px;
     background-color: var(--text-color);
-    padding: 40px;
+    padding: var(--pad);
 }
 .gradient{
     grid-row: 1/2;
@@ -142,34 +143,54 @@ label input {
     display: grid;
     grid-column: 2/3;
     background-color: var(--secondary-color);
-    padding: 25px 16px;
+    padding: var(--pad);
 }
 .searchInput {
     height: 48px;
-    padding : 10px;
+    padding : 12px;
     border:0;
     border-radius: 8px;
     color: var(--input-text-color);
     border: 1px solid var(--icons-bg-color)
 }
-.mainMenu {
-    display: grid;
-    grid-template-columns: 92% 4% 4%;
-    margin-top: 25px;
-    margin-bottom: 25px;
+.h1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.options{
+    display: flex;
+    flex: 0 0 3.5rem;
+    justify-content: space-between;
 }
 .title {
     font-size: var(--title-font-size);
-    color: #343951;
+    line-height: var(--title-height);
+    font-weight: 500;
+    color:var(--text-color);
+}
+.description {
+    font-size: var(--subtitle-font-size);
+    line-height: var(--subtitle-height);
+    color: var(--menu-font-color);
+    font-weight: 500;
 }
 .mosaics {
     display: grid;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     grid-template-columns: repeat(3,30%);
 }
+.mosaic {
+    display: grid;
+    grid-template-rows: 50% 35% 15% ;
+    height: var(--mosaics-height);
+    background-color: var(--main-bg-color);
+    border-radius: 12%;
+    padding: 12%;
+}
 .optionsMosaic {
-    margin-top: 10px;
     display: grid;
     grid-template-columns: 3% 30% 9px 50% 10%;
     grid-template-rows: 8% 15% 10%;
@@ -207,14 +228,6 @@ label input {
 }
 .rings.second {
     grid-column: 4/5;
-}
-.mosaic {
-    display: grid;
-    grid-template-rows: 50% 25% 25% ;
-    height: var(--mosaics-height);
-    background-color: var(--main-bg-color);
-    border-radius: 12%;
-    padding: 14px;
 }
 .miniMosaic {
     padding: 10%;
@@ -255,11 +268,14 @@ label input {
     color: var(--neutral-gray);
 }
 .titleProject.regular {
-    color: var(--main-bg-color);
+    color: #FFFFFF;
     font-weight: 400;
 }
 .titleProject.light {
     color: #FFFFFF;
+}
+.titleProject.dark {
+    color: #343951;
 }
 .miniTitleProject {
     align-self: center;
@@ -269,8 +285,14 @@ label input {
     color: var(--secondary-color);
 }
 .dateProject {
-    font-size: var(--descrition-font-size);
+    font-size: var(--aside-font-size);
+    line-height: var(--aside-height);
     color: var(--menu-font-color);
+}
+span {
+    font-size: var(--aside-font-size);
+    line-height: var(--aside-height);
+    color: var(--text-color);
 }
 .dateProject.middle {
     text-align: center;
@@ -405,15 +427,6 @@ tr{
     height: var(--btn-height);
     border-radius: 7%;
     font-size: var(--aside-font-size);
-}
-span {
-    float: right;
-    font-size: var(--subtitle-font-size);
-    color: inherit;
-    
-}
-span.center {
-    float:none;
 }
 /*DONUT*/
 * {
