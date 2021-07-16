@@ -9,29 +9,43 @@ html {
 }
 
 :root {
+    --title-font-size: 24px;
+    --title-height: 32px;
+    --subtitle-font-size: 16px;
+    --subtitle-height:24px;
+    --aside-font-size: 10px;
+    --aside-height:16px;
+    --descrition-font-size: 8px;
+    --description-height:8px;
+    --width-small-gradient: 144px;
+    --height-small-gradient:40px;
+    --box-width : 144px;
+    --box-height : 120px;
+    --size--miniItem:16px;
+
     --main-bg-color: #FFFFFF;
     --secondary-color: #F5F6FC;
-    --text-color: #343951;
-    --aside-second-color:#464C61;
-    --aside-third-color: #BEC0C8;
-    --button-color:#FF9F00;
-    --button-secondary-color: #FFB233;
-    --input-text-color: #BCBECA;
-    --menu-font-color: #858A9D;
-    --border-color:#E0E7F1;
     --icons-bg-color: #C8CCDB;
+    --neutral-gray: #A6AABB;
+    --menu-font-color: #858A9D;
+    --aside-second-color:#464C61;
+    --text-color: #343951;
+
     --first-color-donut:#4AC29D;
     --second-color-donut:#FF9F00;
     --third-color-donut:#BCBECA;
     --fourth-color-donut:#689FF8;
+    --fifth-color:#FF6860;
+
+    --aside-third-color: #BEC0C8;
+    --button-color:#FF9F00;
+    --button-secondary-color: #FFB233;
+    --input-text-color: #BCBECA;
+    --border-color:#E0E7F1;
     --gap: 19px;
-    --aside-font-size: 10px;
-    --title-font-size: 24px;
-    --subtitle-font-size: 16px;
     --medium-font-size: 16px;
-    --descrition-font-size: 8px;
-    --box-width : 144px;
-    --box-height : 120px;
+    
+    
     --btn-height: 3em;
     --big-box-with: 194px;
     --big-box-height:202px;
@@ -40,8 +54,6 @@ html {
     --mosaics--width: 256px;
     --mosaics-height: 160px;
     --miniMosaic-height: 136px;
-    --width-small-gradient: 144px;
-    --height-small-gradient:40px;
     --file-color-size: 28px;
     --user-item-size: 24px;
     --user-icon-size: 31px;
@@ -63,43 +75,35 @@ body {
 /*---------ASIDE---------------*/
 aside{
     display: grid;
-    grid-template-rows: 10% 42% 25% 18% 5%;
-    grid-column: 1/2;
+    grid-template-rows: 80px 288px 376px 160px 40px;
     background-color: var(--text-color);
-    font-size: var(--aside-font-size);
+    padding: 40px;
 }
 .gradient{
     grid-row: 1/2;
     width:var(--width-small-gradient);
     height:var(--height-small-gradient);
     border-radius: 8px;
-    justify-self:  center;
-    align-self: center;
-    background: linear-gradient(270deg, #689EF8 0%,#FF6860 56.25%, #FF9F00 100%);
+    background: linear-gradient(90deg,var(--second-color-donut) 0%,var(--fifth-color) 50%, var(--fourth-color-donut) 100%);
 }
 .gradient.big{
-    height: 73px;
-    width: 119px;
+    height: 48px;
+    width: 208px;
 }
 .upperAside {
     display: grid;
-    grid-template-rows: repeat(6, 40px);
+    grid-template-rows: repeat(6,48px);
     grid-row: 2/3;
-    color: var(--menu-font-color);
 }
 .placeholder {
     display: grid;
-    margin-top: 25px;
-    margin-left: 40px;
-    align-items: center;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 40px 104px;
   
 }
 .placeholderMini {
     display: grid;
-    grid-template-columns: 30% 70%;
-    margin: 5px;
-    
+    align-content: stretch;
+    grid-template-columns: 24px 88px;
 }
 label input {
     margin-left: 32px;
@@ -108,29 +112,30 @@ label input {
 
 .bottomAside{
     display: grid;
-    align-items: center;
-    grid-template-rows: repeat(4, 23px);
+    align-content: stretch;
+    grid-template-rows: repeat(4,1fr);
+    padding: 12px 16px;
     grid-row: 4/5;
     width: var(--box-width);
     height: var(--box-height);
     background-color: var(--aside-second-color);
-    margin: 5px 40px;
-    padding: 15px 10px;
-    justify-self: center;
     border-radius: 5%;
     color: var(--aside-third-color);
 }
 .createBtn {
+    grid-row: 5/6;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: var(--box-width);
-    height: var(--btn-height);
-    margin-left: 40px;
-    background-color: var(--button-color);
+    height: var(--height-small-gradient);
+    background-color: var(--second-color-donut);
     color: var(--main-bg-color);
-    grid-row: 5/6 ;
-    border-radius: 7px;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+.plus {
+    font-size: var(--title-font-size);
 }
 /*-----------MAIN--------*/
 .main{
@@ -244,15 +249,24 @@ label input {
 }
 .titleProject {
     font-size: var(--subtitle-font-size);
-    font-weight: normal;
-    margin:0px;
-    line-height: 24px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: var(--subtitle-height);
+    color: var(--neutral-gray);
+}
+.titleProject.regular {
+    color: var(--main-bg-color);
+    font-weight: 400;
+}
+.titleProject.light {
+    color: #FFFFFF;
 }
 .miniTitleProject {
-    font-size: 10px;
-    font-weight: normal;
     align-self: center;
-
+    font-size: var(--aside-font-size);
+    line-height: var(--aside-height);
+    font-weight: 400;
+    color: var(--secondary-color);
 }
 .dateProject {
     font-size: var(--descrition-font-size);
@@ -303,17 +317,17 @@ tr{
 .userItem {
     width: var(--user-item-size);
     height: var(--user-item-size);
-    background-color: var(--icons-bg-color);
+    background-color: var(--menu-font-color);
     border-radius: 4px;
 }
-.userItem.dark {
-    background: #858A9D;
+.userItem.light {
+    background: var(--icons-bg-color);
 }
 .userItemMini {
-    justify-self: center;
-    width: 16px;
-    height: 16px;
-    background-color: #858A9D;
+    align-self: center;
+    width: var(--size--miniItem);
+    height: var(--size--miniItem);
+    background-color:var(--menu-font-color);
     border-radius: 4px;
 }
 .userItem.border {
@@ -385,17 +399,7 @@ tr{
     border-radius: 18px;
 }
 /*general elements*/
-button{
-    align-self: center;
-    width: 21px;
-    height: 21px;
-    background-color: var(--button-secondary-color);
-    border: none;
-    border-radius: 5%;
-    color: var(--main-bg-color);
-    size: var(--aside-font-size);
-    font-weight: bold;
-}
+
 .bigButton {
     width: var(--box-width);
     height: var(--btn-height);
