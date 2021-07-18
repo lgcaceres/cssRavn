@@ -14,8 +14,7 @@
 <body>
     <div class= "container">
         <aside>
-            <div class="gradient">
-            </div>
+            <div class="gradient"></div>
             <div class="upperAside">
                 <div class="placeholder">
                     <div class="userItem light"></div>
@@ -61,134 +60,143 @@
                 </div>
             </div>
             <div class="createBtn">
-                <div class="plus">+</div><div class="titleProject regular">Create New</div> 
+                <div class="plus">+</div><div class="titleProject white">Create New</div> 
             </div>
         </aside>
 
 
         <div class = "main">
-            <input class="searchInput" type="search" id="search" name="search" placeholder="Search...">
-            <!-- RECENTLY USED -->
-            <div class="h1">
-                <div class=title>Recently Used</div>
-                <div class="options">
-                    <div class="userItem"></div>
-                    <div class="userItem"></div>
-                </div>
+            <div class="form">
+                <button class="searchButton"><img src="icon2.png"></button>
+                <input class="searchInput" type="search" id="search" name="search" placeholder="Search..." results="0">
             </div>
-
-            <div class="mosaics">
-                <div class="mosaic">
-                    <div class="optionsMosaic">
-                        <div class="squares light"></div>
-                        <div class="squares"></div>
-                        <div class="rings"></div>
-                        <div class="rings second"></div>
-                        <div class="dots">&#10247;</div>
+            <!-- RECENTLY USED -->
+            <div class="recentlyUsed">
+                <div class="h1">
+                    <div class=title>Recently Used</div>
+                    <div class="options">
+                        <div class="userItem"></div>
+                        <div class="userItem"></div>
                     </div>
-                    <p class="titleProject dark">App Project</p>
-                    <p class="dateProject">Created: <span> March 10, 2020</span></p>
                 </div>
-                <div class="mosaic">
-                    <div class="optionsMosaic">
-                        <div class="squares light"></div>
-                        <div class="squares"></div>
-                        <div class="rings"></div>
-                        <div class="rings second"></div>
-                        <div class="dots">&#10247;</div>
+    
+                <div class="mosaics">
+                    <div class="mosaic">
+                        <div class="optionsMosaic">
+                            <div class="square"></div>
+                            <div class="rings"></div>
+                            <div class="rings"></div>
+                            <div class="ring">+3</div>
+                            <div class="dots1">&#10247;</div>
+                        </div>
+                        <p class="titleProject dark">App Project</p>
+                        <p class="dateProject">Created: <span> March 10, 2020</span></p>
                     </div>
-                    <p class="titleProject dark">Client Documents</p>
-                    <p class="dateProject">Created: <span> March 10, 2020</span></p>
-                </div>
-                <div class="mosaic">
-                    <div class="optionsMosaic">
-                        <div class="squares light"></div>
-                        <div class="squares"></div>
-                        <div class="rings"></div>
-                        <div class="rings second"></div>
-                        <div class="dots">&#10247;</div>
+                    <div class="mosaic">
+                        <div class="optionsMosaic">
+                            <div class="square"></div>
+                            <div class="rings"></div>
+                            <div class="rings"></div>
+                            <div class="ring">+3</div>
+                            <div class="dots1">&#10247;</div>
+                        </div>
+                        <p class="titleProject dark">Client Documents</p>
+                        <p class="dateProject">Created: <span> March 10, 2020</span></p>
                     </div>
-                    <p class="titleProject dark">Secret Project</p>
-                    <p class="dateProject">Created: <span> March 10, 2020</span></p>
+                    <div class="mosaic">
+                        <div class="optionsMosaic">
+                            <div class="square"></div>
+                            <div class="rings"></div>
+                            <div class="rings"></div>
+                            <div class="ring">+3</div>
+                            <div class="dots1">&#10247;</div>
+                        </div>
+                        <p class="titleProject dark">Secret Project</p>
+                        <p class="dateProject">Created: <span> March 10, 2020</span></p>
+                    </div>
                 </div>
             </div>
             <!-- RECENT FILES-->
-            <div class="h1">
-                <div class=title>Recent Files</div>
-                <div class="description">View all</div>
-            </div>
-            <table>
-                <tr>
-                    <th scope="col">Name </th>
-                    <th scope="col"></th>
-                    <th scope="col">Members</th>
-                    <th scope="col">Last Modified</th>
-                    <th scope="col"> </th>
-                </tr>
-                <tr>
-                    <td> <div class="fileColor"></div></td>
-                    <td class="fileName">Travel Landing Page</td>
-                    <td>5 members</td>
-                    <td>Mar 8, 2020</td>
-                    <td>...</td>
-                </tr>
-                <tr>
-                    <td> <div class="fileColor"></div></td>
-                    <td class="fileName">True Photos</td>
-                    <td>12 members</td>
-                    <td>Mar 8, 2020</td>
-                    <td>...</td>
-                </tr>
-                <tr>
-                    <td> <div class="fileColor"></div></td>
-                    <td class="fileName">Dashboard Structure</td>
-                    <td>10 members</td>
-                    <td>Mar 9, 2020</td>
-                    <td>...</td>
-                </tr>
-                <tr>
-                    <td> <div class="fileColor"></div></td>
-                    <td class="fileName">Character Ilustration</td>
-                    <td>3 members</td>
-                    <td>Mar 10, 2020</td>
-                    <td>...</td>
-                </tr>
-            </table>
+            <div class="recentFiles">
+                <div class="h1">
+                    <div class=title>Recent Files</div>
+                    <div class="description">View all</div>
+                </div>
+                <div class="table">
+                    <div class="headRow">
+                        <div class="dateProject"> </div>
+                        <div class="dateProject">Name</div>
+                        <div class="dateProject">Members</div>
+                        <div class="dateProject">Last Modified</div>
+                        <div class="dateProject"></div>
+                    </div>
+                    <div class="tableRow">
+                        <div class="fileColor"></div>
+                        <div class="titleProject regular">Travel Landing Page</div>
+                        <div class="titleProject gray">5 members</div>
+                        <div class="titleProject gray">Mar 8, 2020</div>
+                        <div class="dots">&#10247;</div>
+                    </div>
+                    <div class="tableRow">
+                        <div class="fileColor green"></div>
+                        <div class="titleProject regular">True Photos</div>
+                        <div class="titleProject gray">5 members</div>
+                        <div class="titleProject gray">Mar 8, 2020</div>
+                        <div class="dots">&#10247;</div>
+                    </div>
+                    <div class="tableRow">
+                        <div class="fileColor red"></div>
+                        <div class="titleProject regular">Dashboard Structure</div>
+                        <div class="titleProject gray">5 members</div>
+                        <div class="titleProject gray">Mar 9, 2020</div>
+                        <div class="dots">&#10247;</div>
+                    </div>
+                    <div class="tableRow">
+                        <div class="fileColor blue"></div>
+                        <div class="titleProject regular">Character Ilustration</div>
+                        <div class="titleProject gray">3 members</div>
+                        <div class="titleProject gray">Mar 8, 2020</div>
+                        <div class="dots">&#10247;</div>
+                    </div>
+                </div>
+            </div>            
             <!-- SHARE WITH ME-->
-            <div class="h1">
-                <div class=title>Shared with me</div>
-                <div >View all</div>
-            </div>
-            <div class="mosaics">
-                <div class="miniMosaic">
-                    <div class="optionsMiniMosaic">
-                        <div class="miniSquares"></div>
-                        <div class="ringNew"></div>
-                        <div class="ringNew"></div>
-                        <div class="ringNew"></div>
-                    </div>
-                    <p class="titleProject">Landing Page</p>
-                    <p class="dateProject">Created: <span> March 10, 2020</span></p>
+            <div class="shared">
+                <div class="h1">
+                    <div class=title>Shared with me</div>
+                    <div class="description">View all</div>
                 </div>
-                <div class="miniMosaic">
-                    <div class="optionsMiniMosaic">
-                        <div class="miniSquares"></div>
-                        <div class="ringNew"></div>
-                        <div class="ringNew"></div>
-                        <div class="ringNew"></div>
+                <div class="mosaics">
+                    <div class="miniMosaic">
+                        <div class="optionsMiniMosaic">
+                            <div class="miniSquares"></div>
+                            <div class="rings"></div>
+                            <div class="rings"></div>
+                            <div class="rings"></div>
+                        </div>
+                        <p class="titleProject regular">Landing Page</p>
+                        <p class="dateProject">Created: <span> March 10, 2020</span></p>
                     </div>
-                    <p class="titleProject">Illustration Pack</p>
-                    <p class="dateProject">Created: <span> March 10, 2020</span></p>
-                </div>
-                <div class="miniMosaic">
-                    <div class="optionsMiniMosaic">
-                        <div class="miniSquares"></div>
-                        <div class="ringNew"></div>
-                        <div class="ringNew"></div>
-                        <div class="ringNew"></div>
+                    <div class="miniMosaic">
+                        <div class="optionsMiniMosaic">
+                            <div class="miniSquares"></div>
+                            <div class="rings"></div>
+                            <div class="rings"></div>
+                            <div class="rings"></div>
+                        </div>
+                        <p class="titleProject regular">Illustration Pack</p>
+                        <p class="dateProject">Created: <span> March 10, 2020</span></p>
                     </div>
-                    <p class="titleProject">CV design</p>
-                    <p class="dateProject">Created: <span> March 10, 2020</span></p>
+                    <div class="miniMosaic">
+                        <div class="optionsMiniMosaic">
+                            <div class="miniSquares"></div>
+                            <div class="rings"></div>
+                            <div class="rings"></div>
+                            <div class="rings"></div>
+                        </div>
+                        <p class="titleProject regular">CV design</p>
+                        <p class="dateProject">Created: <span> March 10, 2020</span></p>
+                    </div>
                 </div>
             </div>
         </div>
